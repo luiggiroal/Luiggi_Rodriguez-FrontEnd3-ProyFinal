@@ -13,12 +13,12 @@ const Navbar = () => {
 
   return (
     <nav>
-      <img src="../../public/DH.ico" alt="logo"/>
+      <img src="/DH.ico" alt="logo"/>
       <Link to="/">Home</Link>
       <Link to="/favs">Favorites</Link>
       <Link to="/contact">Contact</Link>
       <button onClick={toggleTheme}>
-        <img className="dark-icon" src="../../public/dark.png" alt="dark"/>
+        <img className="dark-icon" src="/dark.png" alt="dark"/>
       </button>
     </nav>
   )
