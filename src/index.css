@@ -25,9 +25,23 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+  background-color: lightblue;
+  /*width: 80vw;*/
+  /*justify-content: flex-end;*/
+  /*justify-content: space-between;*/
+  align-items: center;
   padding: 1rem;
+}
+
+nav button {
+  width: 25px; 
+  height: 25px; 
+  padding: 0; 
+  margin-left: 10px;
+}
+
+nav > img {
+  margin-right: auto;
 }
 
 a{
@@ -80,6 +94,21 @@ form{
   border: 0.5px solid rgb(136, 136, 136);
 }
 
+.card h3 {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.dark-icon {
+  width: 100%;
+  height: auto;
+  /*padding: 0;*/
+}
+
 .card:hover{
   border: 0.5px solid rgb(206, 217, 142);
 }
@@ -117,6 +146,14 @@ tr:nth-child(even) {
   background-color: #12121296;
   color: white;
 }
-.dark > a {
+.dark  a {
   color: white;
+}
+
+.dark nav {
+  background-color: #012c38;
+}
+
+input::placeholder {
+  font-family: 'Cursive', sans-serif;
 }

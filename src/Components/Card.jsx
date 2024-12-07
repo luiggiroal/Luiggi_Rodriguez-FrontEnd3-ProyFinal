@@ -1,20 +1,28 @@
 import React from "react";
+import {Link} from "react-router-dom";
+import {useContextGlobal} from './utils/global.context.jsx'
 
+const Card = ({dentist}) => {
+  const { name, username, id } = dentist
+  console.log(name)
+  console.log(username)
+  console.log(id)
 
-const Card = ({ name, username, id }) => {
+  const {dispatch} = useContextGlobal()
 
   const addFav = ()=>{
-    // Aqui iria la logica para agregar la Card en el localStorage
+    dispatch({type: "ADD_FAV", payload: dentist})
   }
 
   return (
     <div className="card">
-        {/* En cada card deberan mostrar en name - username y el id */}
 
-        {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
-
-        {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={addFav} className="favButton">Add fav</button>
+      <Link to={`/detail/${id}`} >
+        <img src="../../public/images/doctor.jpg" alt="" />
+        <h1>{name}</h1>
+        <h3>{username}</h3>
+      </Link>
+        <button onClick={addFav} className="favButton">⭐</button>
     </div>
   );
 };
